@@ -1,0 +1,50 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/GitLocalRep/test11UARTup_CAM_RAM/simulation/qsim
+vtest11
+Z1 !s110 1470384435
+!i10b 1
+!s100 z1PgCHni:X_kjfd13YOh62
+IPHK_@hLPcKXge9ZX<ING]0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1470384431
+8test11.vo
+Ftest11.vo
+L0 32
+Z3 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z4 !s108 1470384435.000000
+!s107 test11.vo|
+!s90 -work|work|test11.vo|
+!i113 1
+Z5 o-work work
+vtest11_vlg_vec_tst
+R1
+!i10b 1
+!s100 jGoi?nk;VlDK?a1I?alhQ0
+IBGGgz?V2UX>=e0[Yo2dfF1
+R2
+R0
+w1470384424
+8WaveformTestWorkingUART.vwf.vt
+FWaveformTestWorkingUART.vwf.vt
+L0 30
+R3
+r1
+!s85 0
+31
+R4
+!s107 WaveformTestWorkingUART.vwf.vt|
+!s90 -work|work|WaveformTestWorkingUART.vwf.vt|
+!i113 1
+R5

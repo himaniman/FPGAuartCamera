@@ -1,0 +1,76 @@
+|test11
+clk => clk.IN1
+PinRX => PinRX.IN1
+PinTX << myUARTup:comb_26.PinTX
+
+
+|test11|myUARTup:comb_26
+PinRX => dataIN.DATAB
+PinRX => always0.IN1
+clk => PinTX~reg0.CLK
+clk => shiftRegTX[0].CLK
+clk => shiftRegTX[1].CLK
+clk => shiftRegTX[2].CLK
+clk => shiftRegTX[3].CLK
+clk => shiftRegTX[4].CLK
+clk => shiftRegTX[5].CLK
+clk => shiftRegTX[6].CLK
+clk => shiftRegTX[7].CLK
+clk => dataCounterTX[0].CLK
+clk => dataCounterTX[1].CLK
+clk => dataCounterTX[2].CLK
+clk => dataCounterTX[3].CLK
+clk => clok2048MbodCounterTX[0].CLK
+clk => clok2048MbodCounterTX[1].CLK
+clk => clok2048MbodCounterTX[2].CLK
+clk => clok2048MbodCounterTX[3].CLK
+clk => clok2048MbodCounterTX[4].CLK
+clk => dataIN[0]~reg0.CLK
+clk => dataIN[1]~reg0.CLK
+clk => dataIN[2]~reg0.CLK
+clk => dataIN[3]~reg0.CLK
+clk => dataIN[4]~reg0.CLK
+clk => dataIN[5]~reg0.CLK
+clk => dataIN[6]~reg0.CLK
+clk => dataIN[7]~reg0.CLK
+clk => flagOUT_DataResive~reg0.CLK
+clk => dataCounter[0].CLK
+clk => dataCounter[1].CLK
+clk => dataCounter[2].CLK
+clk => dataCounter[3].CLK
+clk => clok2048MbodCounterRX[0].CLK
+clk => clok2048MbodCounterRX[1].CLK
+clk => clok2048MbodCounterRX[2].CLK
+clk => clok2048MbodCounterRX[3].CLK
+clk => clok2048MbodCounterRX[4].CLK
+flagIN_DataRedy => always0.IN1
+flagIN_DataRedy => always0.IN1
+flagIN_DataRedy => always0.IN1
+dataOUT[0] => shiftRegTX.DATAB
+dataOUT[0] => shiftRegTX.DATAB
+dataOUT[1] => shiftRegTX.DATAB
+dataOUT[1] => shiftRegTX.DATAB
+dataOUT[2] => shiftRegTX.DATAB
+dataOUT[2] => shiftRegTX.DATAB
+dataOUT[3] => shiftRegTX.DATAB
+dataOUT[3] => shiftRegTX.DATAB
+dataOUT[4] => shiftRegTX.DATAB
+dataOUT[4] => shiftRegTX.DATAB
+dataOUT[5] => shiftRegTX.DATAB
+dataOUT[5] => shiftRegTX.DATAB
+dataOUT[6] => shiftRegTX.DATAB
+dataOUT[6] => shiftRegTX.DATAB
+dataOUT[7] => shiftRegTX.DATAB
+dataOUT[7] => shiftRegTX.DATAB
+PinTX <= PinTX~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataIN[0] <= dataIN[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataIN[1] <= dataIN[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataIN[2] <= dataIN[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataIN[3] <= dataIN[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataIN[4] <= dataIN[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataIN[5] <= dataIN[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataIN[6] <= dataIN[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataIN[7] <= dataIN[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+flagOUT_DataResive <= flagOUT_DataResive~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

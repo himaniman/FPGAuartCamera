@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at myuartup.v(20): always construct contains both blocking and non-blocking assignments File: C:/GitLocalRep/test11UARTup_CAM_RAM/myuartup.v Line: 20
