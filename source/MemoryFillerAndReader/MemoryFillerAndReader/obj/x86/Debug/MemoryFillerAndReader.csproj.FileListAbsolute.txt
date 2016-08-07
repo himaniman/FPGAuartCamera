@@ -1,0 +1,7 @@
+C:\GitLocalRep\FPGAuartCamera\source\MemoryFillerAndReader\MemoryFillerAndReader\bin\Debug\MemoryFillerAndReader.exe
+C:\GitLocalRep\FPGAuartCamera\source\MemoryFillerAndReader\MemoryFillerAndReader\bin\Debug\MemoryFillerAndReader.pdb
+C:\GitLocalRep\FPGAuartCamera\source\MemoryFillerAndReader\MemoryFillerAndReader\obj\x86\Debug\MemoryFillerAndReader.Form1.resources
+C:\GitLocalRep\FPGAuartCamera\source\MemoryFillerAndReader\MemoryFillerAndReader\obj\x86\Debug\MemoryFillerAndReader.Properties.Resources.resources
+C:\GitLocalRep\FPGAuartCamera\source\MemoryFillerAndReader\MemoryFillerAndReader\obj\x86\Debug\MemoryFillerAndReader.csproj.GenerateResource.Cache
+C:\GitLocalRep\FPGAuartCamera\source\MemoryFillerAndReader\MemoryFillerAndReader\obj\x86\Debug\MemoryFillerAndReader.exe
+C:\GitLocalRep\FPGAuartCamera\source\MemoryFillerAndReader\MemoryFillerAndReader\obj\x86\Debug\MemoryFillerAndReader.pdb

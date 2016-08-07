@@ -1,0 +1,5 @@
+
+State Machine - |test12|State
+Name State.0001 
+State.0000 0 
+State.0001 1 

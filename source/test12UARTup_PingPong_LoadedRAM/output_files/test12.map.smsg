@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at myUARTup.v(20): always construct contains both blocking and non-blocking assignments File: C:/GitLocalRep/FPGAuartCamera/source/test12UARTup_PingPong_LoadedRAM/myUARTup.v Line: 20

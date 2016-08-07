@@ -1,0 +1,7 @@
+module test12(
+input clk,
+input PinRX,
+output PinTX
+);
+
+endmodule 
