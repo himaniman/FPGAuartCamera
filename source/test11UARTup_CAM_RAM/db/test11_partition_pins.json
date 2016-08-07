@@ -8,11 +8,71 @@
 					"strict" : false
 				},
 				{
+					"name" : "debug",
+					"strict" : false
+				},
+				{
+					"name" : "debug2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "debug2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "debug2[2]",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
 				{
+					"name" : "PCLK",
+					"strict" : false
+				},
+				{
+					"name" : "VSYNC",
+					"strict" : false
+				},
+				{
+					"name" : "HREF",
+					"strict" : false
+				},
+				{
 					"name" : "PinRX",
+					"strict" : false
+				},
+				{
+					"name" : "ImageBus[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ImageBus[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ImageBus[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ImageBus[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ImageBus[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ImageBus[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ImageBus[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ImageBus[7]",
 					"strict" : false
 				}
 			]

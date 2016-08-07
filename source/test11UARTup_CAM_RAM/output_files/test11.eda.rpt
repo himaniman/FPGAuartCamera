@@ -1,5 +1,5 @@
 EDA Netlist Writer report for test11
-Fri Aug 05 18:37:55 2016
+Sat Aug 06 21:03:59 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Fri Aug 05 18:37:55 2016 ;
+; EDA Netlist Writer Status ; Successful - Sat Aug 06 21:03:59 2016 ;
 ; Revision Name             ; test11                                ;
 ; Top-level Entity Name     ; test11                                ;
 ; Family                    ; Cyclone V                             ;
@@ -67,13 +67,13 @@ agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+-------------------------------------------------------------------+
-; Simulation Generated Files                                        ;
-+-------------------------------------------------------------------+
-; Generated Files                                                   ;
-+-------------------------------------------------------------------+
-; C:/GitLocalRep/test11UARTup_CAM_RAM/simulation/modelsim/test11.vo ;
-+-------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                              ;
++-----------------------------------------------------------------------------------------+
+; Generated Files                                                                         ;
++-----------------------------------------------------------------------------------------+
+; C:/GitLocalRep/FPGAuartCamera/source/test11UARTup_CAM_RAM/simulation/modelsim/test11.vo ;
++-----------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -82,14 +82,14 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Fri Aug 05 18:37:48 2016
+    Info: Processing started: Sat Aug 06 21:03:50 2016
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off test11 -c test11
 Warning (10905): Generated the EDA functional simulation netlist because it is the only supported netlist type for this device.
-Info (204019): Generated file test11.vo in folder "C:/GitLocalRep/test11UARTup_CAM_RAM/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file test11.vo in folder "C:/GitLocalRep/FPGAuartCamera/source/test11UARTup_CAM_RAM/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 785 megabytes
-    Info: Processing ended: Fri Aug 05 18:37:56 2016
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Peak virtual memory: 850 megabytes
+    Info: Processing ended: Sat Aug 06 21:03:59 2016
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:10
 
 

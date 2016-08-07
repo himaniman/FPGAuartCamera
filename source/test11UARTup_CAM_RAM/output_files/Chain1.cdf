@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(5CEBA4F23) Path("C:/GitLocalRep/test11UARTup_CAM_RAM/output_files/") File("test11.sof") MfrSpec(OpMask(1));
+		Device PartName(5CEBA4F23) Path("C:/GitLocalRep/FPGAuartCamera/source/test11UARTup_CAM_RAM/output_files/") File("test11.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

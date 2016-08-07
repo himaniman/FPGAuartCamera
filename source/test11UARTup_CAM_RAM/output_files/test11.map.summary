@@ -1,17 +1,17 @@
-Analysis & Synthesis Status : Successful - Fri Aug 05 18:33:42 2016
+Analysis & Synthesis Status : Successful - Sat Aug 06 20:54:54 2016
 Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 Revision Name : test11
 Top-level Entity Name : test11
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 39
-Total pins : 3
+Total registers : 80
+Total pins : 22
 Total virtual pins : 0
-Total block memory bits : 0
+Total block memory bits : 262,144
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0
 Total HSSI PMA TX Serializers : 0
-Total PLLs : 0
+Total PLLs : 1
 Total DLLs : 0

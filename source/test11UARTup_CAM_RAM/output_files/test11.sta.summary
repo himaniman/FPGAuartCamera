@@ -3,51 +3,115 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -2.039
-TNS   : -64.122
+Slack : -7.865
+TNS   : -6011.429
+
+Type  : Slow 1100mV 85C Model Setup 'PCLK'
+Slack : -7.373
+TNS   : -178.233
+
+Type  : Slow 1100mV 85C Model Hold 'PCLK'
+Slack : -4.209
+TNS   : -113.569
 
 Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : 0.240
+Slack : 0.241
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'PCLK'
+Slack : -0.538
+TNS   : -33.144
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'comb_401|mypll24mhz_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.388
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.538
-TNS   : -37.851
+Slack : 8.667
+TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -2.204
-TNS   : -65.249
+Slack : -7.578
+TNS   : -5704.393
+
+Type  : Slow 1100mV 0C Model Setup 'PCLK'
+Slack : -7.181
+TNS   : -175.194
+
+Type  : Slow 1100mV 0C Model Hold 'PCLK'
+Slack : -4.050
+TNS   : -110.447
 
 Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : 0.224
+Slack : 0.232
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'PCLK'
+Slack : -0.538
+TNS   : -31.990
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'comb_401|mypll24mhz_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.388
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.538
-TNS   : -38.756
+Slack : 8.600
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'PCLK'
+Slack : -4.506
+TNS   : -86.495
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -0.452
-TNS   : -7.457
+Slack : -3.643
+TNS   : -2484.561
+
+Type  : Fast 1100mV 85C Model Hold 'PCLK'
+Slack : -1.998
+TNS   : -54.118
 
 Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : 0.129
+Slack : 0.127
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'PCLK'
+Slack : -0.282
+TNS   : -11.218
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'comb_401|mypll24mhz_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.388
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.100
-TNS   : -4.606
+Slack : 8.800
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'PCLK'
+Slack : -3.789
+TNS   : -70.979
 
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -0.336
-TNS   : -4.711
+Slack : -3.363
+TNS   : -2269.577
+
+Type  : Fast 1100mV 0C Model Hold 'PCLK'
+Slack : -1.965
+TNS   : -53.991
 
 Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : 0.114
+Slack : 0.115
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'PCLK'
+Slack : -0.267
+TNS   : -10.598
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'comb_401|mypll24mhz_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.388
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.099
-TNS   : -4.653
+Slack : 8.792
+TNS   : 0.000
 
 ------------------------------------------------------------

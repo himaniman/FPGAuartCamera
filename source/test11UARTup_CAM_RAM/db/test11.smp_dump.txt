@@ -1,0 +1,9 @@
+
+State Machine - |test11|State
+Name State.0111 State.0100 State.0011 State.0010 State.0001 State.0000 
+State.0000 0 0 0 0 0 0 
+State.0001 0 0 0 0 1 1 
+State.0010 0 0 0 1 0 1 
+State.0011 0 0 1 0 0 1 
+State.0100 0 1 0 0 0 1 
+State.0111 1 0 0 0 0 1 

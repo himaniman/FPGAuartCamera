@@ -1,0 +1,8 @@
+C:\GitLocalRep\FPGAuartCamera\source\DataTransmitter\DataTransmitter\bin\Debug\DataTransmitter.exe
+C:\GitLocalRep\FPGAuartCamera\source\DataTransmitter\DataTransmitter\bin\Debug\DataTransmitter.pdb
+C:\GitLocalRep\FPGAuartCamera\source\DataTransmitter\DataTransmitter\obj\x86\Debug\DataTransmitter.Form1.resources
+C:\GitLocalRep\FPGAuartCamera\source\DataTransmitter\DataTransmitter\obj\x86\Debug\DataTransmitter.Properties.Resources.resources
+C:\GitLocalRep\FPGAuartCamera\source\DataTransmitter\DataTransmitter\obj\x86\Debug\DataTransmitter.csproj.GenerateResource.Cache
+C:\GitLocalRep\FPGAuartCamera\source\DataTransmitter\DataTransmitter\obj\x86\Debug\DataTransmitter.exe
+C:\GitLocalRep\FPGAuartCamera\source\DataTransmitter\DataTransmitter\obj\x86\Debug\DataTransmitter.pdb
+C:\GitLocalRep\FPGAuartCamera\source\DataTransmitter\DataTransmitter\obj\x86\Debug\DataTransmitter.csprojResolveAssemblyReference.cache
