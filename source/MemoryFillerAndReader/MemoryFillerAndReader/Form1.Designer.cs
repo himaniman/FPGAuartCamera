@@ -41,8 +41,12 @@
             this.TimeBox = new System.Windows.Forms.NumericUpDown();
             this.button4 = new System.Windows.Forms.Button();
             this.LogOn = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.HalfDuplexOn = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.CountBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // LogBox
@@ -72,7 +76,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(371, 39);
+            this.button1.Location = new System.Drawing.Point(404, 39);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(26, 23);
             this.button1.TabIndex = 2;
@@ -82,7 +86,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(403, 39);
+            this.button2.Location = new System.Drawing.Point(372, 39);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(26, 23);
             this.button2.TabIndex = 3;
@@ -93,7 +97,7 @@
             // indicator
             // 
             this.indicator.AutoSize = true;
-            this.indicator.Location = new System.Drawing.Point(391, 353);
+            this.indicator.Location = new System.Drawing.Point(391, 355);
             this.indicator.Name = "indicator";
             this.indicator.Size = new System.Drawing.Size(61, 13);
             this.indicator.TabIndex = 4;
@@ -174,11 +178,45 @@
             this.LogOn.Text = "LogOn";
             this.LogOn.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(320, 240);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(394, 298);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(89, 23);
+            this.button5.TabIndex = 12;
+            this.button5.Text = "BuffToImage";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // HalfDuplexOn
+            // 
+            this.HalfDuplexOn.AutoSize = true;
+            this.HalfDuplexOn.Checked = true;
+            this.HalfDuplexOn.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.HalfDuplexOn.Location = new System.Drawing.Point(424, 217);
+            this.HalfDuplexOn.Name = "HalfDuplexOn";
+            this.HalfDuplexOn.Size = new System.Drawing.Size(78, 17);
+            this.HalfDuplexOn.TabIndex = 13;
+            this.HalfDuplexOn.Text = "HalfDuplex";
+            this.HalfDuplexOn.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(504, 375);
+            this.Controls.Add(this.HalfDuplexOn);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LogOn);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.TimeBox);
@@ -194,6 +232,7 @@
             this.Text = "Filler";
             ((System.ComponentModel.ISupportInitialize)(this.CountBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,6 +252,9 @@
         private System.Windows.Forms.NumericUpDown TimeBox;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.CheckBox LogOn;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.CheckBox HalfDuplexOn;
     }
 }
 

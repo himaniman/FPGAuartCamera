@@ -7,41 +7,35 @@ output reg debugLED
 );
 
 	wire ActionDataReciveFromUART;
-	reg ActionDataTransmitToUART;
-	reg [3:0] PauseCounter;
-	reg [3:0] State;
+	reg [2:0] ActionDataTransmitToUART;
+	//reg [3:0] PauseCounter;
+	//reg [3:0] State;
 	
 	wire [7:0] DataBusForPingPong;
 	
-
+	wire Clk24Mhz;
+	
 	always @(posedge clk) begin
-		if (ActionDataReciveFromUART) begin
-			ActionDataTransmitToUART<=1;
-			//State<=1;
-			//debugLED<=~debugLED;
+		if (ActionDataReciveFromUART && ~ActionDataTransmitToUART[0]) begin
+			ActionDataTransmitToUART<=3'b111;
 		end
-		if (ActionDataTransmitToUART) begin
-			ActionDataTransmitToUART<=0;
+		if (ActionDataTransmitToUART[0]) begin
+			ActionDataTransmitToUART<=ActionDataTransmitToUART>>1;
 		end
-//		if (State==1) begin
-//			if (PauseCounter<2) begin
-//				PauseCounter<=PauseCounter+1;
-//			end
-//			if (PauseCounter>=2) begin
-//				PauseCounter<=0;
-//				ActionDataTransmitToUART<=0;
-//				State<=0;
-//			end
-//		end
 	end
 	
 	myUARTup(
 		.PinRX(PinRX),
 		.clk(clk),
-		.flagIN_DataRedy(ActionDataTransmitToUART),
+		.flagIN_DataRedy(ActionDataTransmitToUART[0]),
 		.dataOUT(DataBusForPingPong),					//8bit data transmitted with UART
 		.PinTX(PinTX),
 		.dataIN(DataBusForPingPong),					//8bit data resived from UART
 		.flagOUT_DataResive(ActionDataReciveFromUART)
+	);
+	
+	PLL24Mhz(
+	.refclk(clk),
+	.outclk_0(Clk24Mhz)
 	);
 endmodule 

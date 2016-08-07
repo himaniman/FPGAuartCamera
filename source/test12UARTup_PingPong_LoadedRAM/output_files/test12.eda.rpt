@@ -1,5 +1,5 @@
 EDA Netlist Writer report for test12
-Sun Aug 07 14:10:53 2016
+Sun Aug 07 23:26:44 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sun Aug 07 14:10:53 2016 ;
+; EDA Netlist Writer Status ; Successful - Sun Aug 07 23:26:44 2016 ;
 ; Revision Name             ; test12                                ;
 ; Top-level Entity Name     ; test12                                ;
 ; Family                    ; Cyclone V                             ;
@@ -95,13 +95,13 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Altera and sold by Altera or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Sun Aug 07 14:10:46 2016
+    Info: Processing started: Sun Aug 07 23:26:37 2016
 Info: Command: quartus_eda --write_settings_files=off --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/GitLocalRep/FPGAuartCamera/source/test12UARTup_PingPong_LoadedRAM/simulation/qsim/ test12 -c test12
 Info (204019): Generated file test12.vo in folder "C:/GitLocalRep/FPGAuartCamera/source/test12UARTup_PingPong_LoadedRAM/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 772 megabytes
-    Info: Processing ended: Sun Aug 07 14:10:53 2016
-    Info: Elapsed time: 00:00:07
+    Info: Peak virtual memory: 773 megabytes
+    Info: Processing ended: Sun Aug 07 23:26:45 2016
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:07
 
 

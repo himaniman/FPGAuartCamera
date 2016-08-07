@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO.Ports;
 using System.Threading;
+using System.Drawing.Imaging;
 
 namespace MemoryFillerAndReader
 {
@@ -24,9 +25,9 @@ namespace MemoryFillerAndReader
             SP1.DataReceived += new SerialDataReceivedEventHandler(sp_DataReceived);
             SP1.ReadBufferSize = 32768;
             SP1.WriteBufferSize = 2048;
-            MessageBox.Show(SP1.ReadBufferSize.ToString() + " " + SP1.ReadTimeout + " " + SP1.WriteBufferSize + " " + SP1.WriteTimeout);
+            //MessageBox.Show(SP1.ReadBufferSize.ToString() + " " + SP1.ReadTimeout + " " + SP1.WriteBufferSize + " " + SP1.WriteTimeout);
             CounterByte = 0;
-            Buffer = new byte [19200];
+            Buffer = new byte [20000];
         }
 
         private void Connect(object sender, EventArgs e)
@@ -114,32 +115,50 @@ namespace MemoryFillerAndReader
                 {
                     for (int i = 0; i < CountBox.Value; i++)
                     {
-                        byte[] z = { 0xff };
-                        SP1.Write(z, 0, 1);
-                        Thread.Sleep((int)TimeBox.Value);
-                    }
-                }
-                if (MessegesBox.Text == "xx")
-                {
-                    for (int i = 0; i < CountBox.Value; i++)
-                    {
-                        while (SP1.BytesToWrite>SP1.WriteBufferSize-20)
+                        while (SP1.BytesToWrite > SP1.WriteBufferSize - 20)
                         {
                         }
                         byte[] z = { 0xff };
-                        z[0] = (byte)rnd.Next(0, 255);
                         SP1.Write(z, 0, 1);
                         Thread.Sleep((int)TimeBox.Value);
-                        if (i % 1000 == 0 && i!=0)
+                        if (i % 1000 == 0 && i != 0)
                         {
-                            TimerTick(sender,e);
+                            TimerTick(sender, e);
                             //Thread.Sleep(100);
                             this.Refresh();
                             this.Update();
                         }
                     }
                 }
+                if (MessegesBox.Text == "xx")
+                {
+                    for (int i = 0; i < CountBox.Value; i++)
+                    {
+                        while (SP1.BytesToWrite>SP1.WriteBufferSize-20){}
+                        byte[] z = { 0xff };
+                        z[0] = (byte)rnd.Next(0, 255);
+                        SP1.Write(z, 0, 1);
+                        Thread.Sleep((int)TimeBox.Value);
+                        if (i % 1000 == 0 && i!=0 && HalfDuplexOn.Checked)
+                        {
+                            TimerTick(sender,e);
+                            //Thread.Sleep(100);
+                            //this.Refresh();
+                            this.Update();
+                        }
+                    }
+                }
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Bitmap imgNoise = new Bitmap(160, 120, PixelFormat.Format16bppRgb565);
+            for (int i = 0; i < CounterByte; i++)
+            {
+                if (i<19200) imgNoise.SetPixel(i % 160, i / 160, Color.FromArgb(Buffer[i], Buffer[i], Buffer[i]));
+            }
+            pictureBox1.Image = imgNoise;
         }
     }
 }
