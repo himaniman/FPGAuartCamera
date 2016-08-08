@@ -27,6 +27,7 @@ output reg flagOUT_DataResive
 				clok2048MbodCounterRX<=clok2048MbodCounterRX+1;
 				if (dataCounter==1) begin
 					dataCounter<=dataCounter-1;
+//					flagOUT_DataResive<=0;
 				end
 				if (dataCounter==0) begin
 					flagOUT_DataResive<=0;
@@ -79,6 +80,10 @@ output reg flagOUT_DataResive
 				PinTX<=0;
 				shiftRegTX<=dataOUT;
 			end
+//			if (dataCounterTX==0 && flagIN_DataRedy==1) begin
+//				dataCounterTX<=11;
+//				shiftRegTX<=dataOUT;
+//			end
 		end
 	end
 

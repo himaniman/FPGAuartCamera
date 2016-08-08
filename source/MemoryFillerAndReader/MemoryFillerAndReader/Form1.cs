@@ -70,7 +70,7 @@ namespace MemoryFillerAndReader
                 while (SP1.BytesToRead > 0)
                 {
                     int temp = SP1.ReadByte();
-                    if (LogOn.Checked) LogBox.Items.Add(temp);
+                    if (LogOn.Checked) LogBox.Items.Add(temp + "\t" + Convert.ToInt32(temp).ToString("X"));
                     Buffer[CounterByte] = (byte)temp;
                     if (LogOn.Checked) LogBox.SelectedIndex = LogBox.Items.Count - 1;
                     CounterByte++;
@@ -115,17 +115,15 @@ namespace MemoryFillerAndReader
                 {
                     for (int i = 0; i < CountBox.Value; i++)
                     {
-                        while (SP1.BytesToWrite > SP1.WriteBufferSize - 20)
-                        {
-                        }
+                        while (SP1.BytesToWrite > SP1.WriteBufferSize - 20) { }
                         byte[] z = { 0xff };
                         SP1.Write(z, 0, 1);
                         Thread.Sleep((int)TimeBox.Value);
-                        if (i % 1000 == 0 && i != 0)
+                        if (i % 1000 == 0 && i != 0 && HalfDuplexOn.Checked)
                         {
                             TimerTick(sender, e);
                             //Thread.Sleep(100);
-                            this.Refresh();
+                            //this.Refresh();
                             this.Update();
                         }
                     }
@@ -148,6 +146,23 @@ namespace MemoryFillerAndReader
                         }
                     }
                 }
+                if (MessegesBox.Text == "55")
+                {
+                    for (int i = 0; i < CountBox.Value; i++)
+                    {
+                        while (SP1.BytesToWrite > SP1.WriteBufferSize - 20) { }
+                        byte[] z = { 0x55 };
+                        SP1.Write(z, 0, 1);
+                        Thread.Sleep((int)TimeBox.Value);
+                        if (i % 1000 == 0 && i != 0 && HalfDuplexOn.Checked)
+                        {
+                            TimerTick(sender, e);
+                            //Thread.Sleep(100);
+                            //this.Refresh();
+                            this.Update();
+                        }
+                    }
+                }
             }
         }
 
@@ -159,6 +174,51 @@ namespace MemoryFillerAndReader
                 if (i<19200) imgNoise.SetPixel(i % 160, i / 160, Color.FromArgb(Buffer[i], Buffer[i], Buffer[i]));
             }
             pictureBox1.Image = imgNoise;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (SP1.IsOpen == true)
+            {
+                byte[] z = { 0xbb };
+                SP1.Write(z, 0, 1);
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (SP1.IsOpen == true)
+            {
+                byte[] z = { 0xdd };
+                SP1.Write(z, 0, 1);
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (SP1.IsOpen == true)
+            {
+                byte[] z = { 0xaa };
+                SP1.Write(z, 0, 1);
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (SP1.IsOpen == true)
+            {
+                byte[] z = { 0xcc };
+                SP1.Write(z, 0, 1);
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (SP1.IsOpen == true)
+            {
+                byte[] z = { 0x55 };
+                SP1.Write(z, 0, 1);
+            }
         }
     }
 }

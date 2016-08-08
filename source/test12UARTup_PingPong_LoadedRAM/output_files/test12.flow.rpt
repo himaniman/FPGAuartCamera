@@ -1,5 +1,5 @@
 Flow report for test12
-Sun Aug 07 23:26:44 2016
+Mon Aug 08 13:45:04 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sun Aug 07 23:26:44 2016       ;
+; Flow Status                     ; Successful - Mon Aug 08 13:45:04 2016       ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                   ; test12                                      ;
 ; Top-level Entity Name           ; test12                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 33 / 18,480 ( < 1 % )                       ;
-; Total registers                 ; 45                                          ;
+; Logic utilization (in ALMs)     ; 88 / 18,480 ( < 1 % )                       ;
+; Total registers                 ; 127                                         ;
 ; Total pins                      ; 4 / 224 ( 2 % )                             ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                       ;
+; Total block memory bits         ; 262,144 / 3,153,920 ( 8 % )                 ;
 ; Total DSP Blocks                ; 0 / 66 ( 0 % )                              ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/07/2016 23:14:28 ;
+; Start date & time ; 08/08/2016 13:38:15 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; test12              ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 79565893565131.147057566703788        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 79565893565131.147062749405796        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                  ; --            ; --          ; eda_simulation ;
@@ -87,6 +87,7 @@ agreement for further details.
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --             ;
 ; MISC_FILE                           ; PLL24Mhz.cmp                          ; --            ; --          ; --             ;
 ; MISC_FILE                           ; PLL24Mhz_sim/PLL24Mhz.vo              ; --            ; --          ; --             ;
+; MISC_FILE                           ; BufferFrameRAM_bb.v                   ; --            ; --          ; --             ;
 ; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                     ; --            ; --          ; --             ;
 ; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                     ; --            ; --          ; --             ;
 ; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                            ; --            ; --          ; --             ;
@@ -107,18 +108,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:01:10     ; 1.0                     ; 860 MB              ; 00:02:57                           ;
-; Fitter                    ; 00:02:29     ; 1.0                     ; 1925 MB             ; 00:02:54                           ;
-; Assembler                 ; 00:00:31     ; 1.0                     ; 860 MB              ; 00:00:30                           ;
-; TimeQuest Timing Analyzer ; 00:00:24     ; 1.0                     ; 1052 MB             ; 00:00:24                           ;
-; EDA Netlist Writer        ; 00:00:07     ; 1.0                     ; 785 MB              ; 00:00:07                           ;
-; EDA Netlist Writer        ; 00:00:07     ; 1.0                     ; 764 MB              ; 00:00:06                           ;
-; EDA Netlist Writer        ; 00:00:07     ; 1.0                     ; 773 MB              ; 00:00:07                           ;
-; EDA Netlist Writer        ; 00:00:06     ; 1.0                     ; 764 MB              ; 00:00:07                           ;
-; EDA Netlist Writer        ; 00:00:07     ; 1.0                     ; 773 MB              ; 00:00:07                           ;
-; EDA Netlist Writer        ; 00:00:07     ; 1.0                     ; 764 MB              ; 00:00:07                           ;
-; EDA Netlist Writer        ; 00:00:07     ; 1.0                     ; 773 MB              ; 00:00:07                           ;
-; Total                     ; 00:05:22     ; --                      ; --                  ; 00:07:33                           ;
+; Analysis & Synthesis      ; 00:01:31     ; 1.0                     ; 877 MB              ; 00:03:26                           ;
+; Fitter                    ; 00:03:44     ; 1.0                     ; 1954 MB             ; 00:04:35                           ;
+; Assembler                 ; 00:00:34     ; 1.0                     ; 884 MB              ; 00:00:34                           ;
+; TimeQuest Timing Analyzer ; 00:00:38     ; 1.0                     ; 1111 MB             ; 00:00:38                           ;
+; EDA Netlist Writer        ; 00:00:09     ; 1.0                     ; 796 MB              ; 00:00:09                           ;
+; Total                     ; 00:06:36     ; --                      ; --                  ; 00:09:22                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -132,12 +127,6 @@ agreement for further details.
 ; Assembler                 ; VVSMobile-PC     ; Windows 7 ; 6.1        ; x86_64         ;
 ; TimeQuest Timing Analyzer ; VVSMobile-PC     ; Windows 7 ; 6.1        ; x86_64         ;
 ; EDA Netlist Writer        ; VVSMobile-PC     ; Windows 7 ; 6.1        ; x86_64         ;
-; EDA Netlist Writer        ; VVSMobile-PC     ; Windows 7 ; 6.1        ; x86_64         ;
-; EDA Netlist Writer        ; VVSMobile-PC     ; Windows 7 ; 6.1        ; x86_64         ;
-; EDA Netlist Writer        ; VVSMobile-PC     ; Windows 7 ; 6.1        ; x86_64         ;
-; EDA Netlist Writer        ; VVSMobile-PC     ; Windows 7 ; 6.1        ; x86_64         ;
-; EDA Netlist Writer        ; VVSMobile-PC     ; Windows 7 ; 6.1        ; x86_64         ;
-; EDA Netlist Writer        ; VVSMobile-PC     ; Windows 7 ; 6.1        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -149,12 +138,6 @@ quartus_fit --read_settings_files=off --write_settings_files=off test12 -c test1
 quartus_asm --read_settings_files=off --write_settings_files=off test12 -c test12
 quartus_sta test12 -c test12
 quartus_eda --read_settings_files=off --write_settings_files=off test12 -c test12
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off test12 -c test12 --vector_source=C:/GitLocalRep/FPGAuartCamera/source/test12UARTup_PingPong_LoadedRAM/WaveformTestingShiftReg.vwf --testbench_file=C:/GitLocalRep/FPGAuartCamera/source/test12UARTup_PingPong_LoadedRAM/simulation/qsim/WaveformTestingShiftReg.vwf.vt
-quartus_eda --write_settings_files=off --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/GitLocalRep/FPGAuartCamera/source/test12UARTup_PingPong_LoadedRAM/simulation/qsim/ test12 -c test12
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off test12 -c test12 --vector_source=C:/GitLocalRep/FPGAuartCamera/source/test12UARTup_PingPong_LoadedRAM/WaveformTestingShiftReg.vwf --testbench_file=C:/GitLocalRep/FPGAuartCamera/source/test12UARTup_PingPong_LoadedRAM/simulation/qsim/WaveformTestingShiftReg.vwf.vt
-quartus_eda --write_settings_files=off --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/GitLocalRep/FPGAuartCamera/source/test12UARTup_PingPong_LoadedRAM/simulation/qsim/ test12 -c test12
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off test12 -c test12 --vector_source=C:/GitLocalRep/FPGAuartCamera/source/test12UARTup_PingPong_LoadedRAM/WaveformTestingShiftReg.vwf --testbench_file=C:/GitLocalRep/FPGAuartCamera/source/test12UARTup_PingPong_LoadedRAM/simulation/qsim/WaveformTestingShiftReg.vwf.vt
-quartus_eda --write_settings_files=off --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/GitLocalRep/FPGAuartCamera/source/test12UARTup_PingPong_LoadedRAM/simulation/qsim/ test12 -c test12
 
 
 
