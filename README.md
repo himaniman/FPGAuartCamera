@@ -5,8 +5,8 @@ Trying connect 8bit Camera to FPGA with translate data on UART
 FPGA - модуль:
 Vcc3.3 	- UART 		- Vcc	Белый
 GND 	- UART 		- GND	Черный
-P18 	- UART		- TX	Феолетовый
-K19 	- UART		- RX	Серый
+K19 	- UART		- TX	Феолетовый
+P18 	- UART		- RX	Серый
 Vcc3.3	- OV7670 	- VDD	Красный
 GND	- OV7670	- GND	Черный
 K16	- OV7670	- XCLK	Коричневый    	((вход) главный тактовый импульс для работы OV7670)

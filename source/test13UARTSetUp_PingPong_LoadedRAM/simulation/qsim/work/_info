@@ -1,0 +1,50 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/GitLocalRepositories/FPGAuartCamera/source/test13UARTSetUp_PingPong_LoadedRAM/simulation/qsim
+vtest13
+Z1 !s110 1472883658
+!i10b 1
+!s100 ikoEMD1DAzO2B^?bYja@d1
+IOf2T_OfIYM]LFiPOOnheh0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1472883657
+8test13.vo
+Ftest13.vo
+L0 32
+Z3 OV;L;10.4b;61
+r1
+!s85 0
+31
+Z4 !s108 1472883658.000000
+!s107 test13.vo|
+!s90 -work|work|test13.vo|
+!i113 1
+Z5 o-work work
+vtest13_vlg_vec_tst
+R1
+!i10b 1
+!s100 Q^W[7QIfKl<>j<?bK?;oF3
+IFW7J?Nmo3T1:UULR;D;dZ0
+R2
+R0
+w1472883653
+8WaveformTestFastOnePackage.vwf.vt
+FWaveformTestFastOnePackage.vwf.vt
+L0 30
+R3
+r1
+!s85 0
+31
+R4
+!s107 WaveformTestFastOnePackage.vwf.vt|
+!s90 -work|work|WaveformTestFastOnePackage.vwf.vt|
+!i113 1
+R5
