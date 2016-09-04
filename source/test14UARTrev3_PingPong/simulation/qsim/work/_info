@@ -1,0 +1,50 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/GitLocalRep/FPGAuartCamera/source/test14UARTrev3_PingPong/simulation/qsim
+vtest14
+!s110 1472980526
+!i10b 1
+!s100 lBNh:2j7<;_42Po_QY93<2
+IgVca[GoLS>N05Mn9?4?Nz2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1472980523
+8test14.vo
+Ftest14.vo
+L0 32
+Z2 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z3 !s108 1472980526.000000
+!s107 test14.vo|
+!s90 -work|work|test14.vo|
+!i113 1
+Z4 o-work work
+vtest14_vlg_vec_tst
+!s110 1472980527
+!i10b 1
+!s100 Bm=?DiGO>QIj<]9aEMjdF3
+IW>o2Gzb6<U2o6d>Em4mXR1
+R1
+R0
+w1472980515
+8WaveformTestDelay2Byte.vwf.vt
+FWaveformTestDelay2Byte.vwf.vt
+L0 30
+R2
+r1
+!s85 0
+31
+R3
+!s107 WaveformTestDelay2Byte.vwf.vt|
+!s90 -work|work|WaveformTestDelay2Byte.vwf.vt|
+!i113 1
+R4

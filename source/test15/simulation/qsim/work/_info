@@ -1,0 +1,50 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/GitLocalRep/FPGAuartCamera/source/test15/simulation/qsim
+vtest15
+Z1 !s110 1472974182
+!i10b 1
+!s100 V1RMBh0co`X>O3OL=PLFi2
+I9`V=Ol63zz1d0DGK8o9V]2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1472974178
+8test15.vo
+Ftest15.vo
+L0 32
+Z3 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z4 !s108 1472974182.000000
+!s107 test15.vo|
+!s90 -work|work|test15.vo|
+!i113 1
+Z5 o-work work
+vtest15_vlg_vec_tst
+R1
+!i10b 1
+!s100 `D9MdZJ[1>ml=fbfK1oVW1
+I>3Ic^L`:dc5IkTn>92UX61
+R2
+R0
+w1472974174
+8testCounter.vwf.vt
+FtestCounter.vwf.vt
+L0 30
+R3
+r1
+!s85 0
+31
+R4
+!s107 testCounter.vwf.vt|
+!s90 -work|work|testCounter.vwf.vt|
+!i113 1
+R5
