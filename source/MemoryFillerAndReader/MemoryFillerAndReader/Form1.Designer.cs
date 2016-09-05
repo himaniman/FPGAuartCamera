@@ -60,7 +60,7 @@
             this.LogBox.FormattingEnabled = true;
             this.LogBox.Location = new System.Drawing.Point(0, 293);
             this.LogBox.Name = "LogBox";
-            this.LogBox.Size = new System.Drawing.Size(504, 82);
+            this.LogBox.Size = new System.Drawing.Size(504, 134);
             this.LogBox.TabIndex = 0;
             // 
             // ConnecterBox
@@ -123,8 +123,10 @@
             this.MessegesBox.FormattingEnabled = true;
             this.MessegesBox.Items.AddRange(new object[] {
             "ff",
+            "00",
             "xx",
-            "55"});
+            "55",
+            "aa"});
             this.MessegesBox.Location = new System.Drawing.Point(372, 240);
             this.MessegesBox.Name = "MessegesBox";
             this.MessegesBox.Size = new System.Drawing.Size(46, 21);
@@ -269,7 +271,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 375);
+            this.ClientSize = new System.Drawing.Size(504, 427);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);

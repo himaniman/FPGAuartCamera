@@ -21,7 +21,7 @@ namespace MemoryFillerAndReader
         public Form1()
         {
             InitializeComponent();
-            SP1 = new SerialPort("COM9", 2048000, Parity.None, 8, StopBits.One);
+            SP1 = new SerialPort("COM9", 1024000, Parity.None, 8, StopBits.One);
             SP1.DataReceived += new SerialDataReceivedEventHandler(sp_DataReceived);
             SP1.ReadBufferSize = 32768;
             SP1.WriteBufferSize = 2048;
@@ -128,6 +128,23 @@ namespace MemoryFillerAndReader
                         }
                     }
                 }
+                if (MessegesBox.Text == "00")
+                {
+                    for (int i = 0; i < CountBox.Value; i++)
+                    {
+                        while (SP1.BytesToWrite > SP1.WriteBufferSize - 20) { }
+                        byte[] z = { 0x00 };
+                        SP1.Write(z, 0, 1);
+                        Thread.Sleep((int)TimeBox.Value);
+                        if (i % 1000 == 0 && i != 0 && HalfDuplexOn.Checked)
+                        {
+                            TimerTick(sender, e);
+                            //Thread.Sleep(100);
+                            //this.Refresh();
+                            this.Update();
+                        }
+                    }
+                }
                 if (MessegesBox.Text == "xx")
                 {
                     for (int i = 0; i < CountBox.Value; i++)
@@ -140,7 +157,7 @@ namespace MemoryFillerAndReader
                         if (i % 1000 == 0 && i!=0 && HalfDuplexOn.Checked)
                         {
                             TimerTick(sender,e);
-                            //Thread.Sleep(100);
+                            Thread.Sleep(1);
                             //this.Refresh();
                             this.Update();
                         }
@@ -152,6 +169,23 @@ namespace MemoryFillerAndReader
                     {
                         while (SP1.BytesToWrite > SP1.WriteBufferSize - 20) { }
                         byte[] z = { 0x55 };
+                        SP1.Write(z, 0, 1);
+                        Thread.Sleep((int)TimeBox.Value);
+                        if (i % 1000 == 0 && i != 0 && HalfDuplexOn.Checked)
+                        {
+                            TimerTick(sender, e);
+                            //Thread.Sleep(100);
+                            //this.Refresh();
+                            this.Update();
+                        }
+                    }
+                }
+                if (MessegesBox.Text == "aa")
+                {
+                    for (int i = 0; i < CountBox.Value; i++)
+                    {
+                        while (SP1.BytesToWrite > SP1.WriteBufferSize - 20) { }
+                        byte[] z = { 0xaa };
                         SP1.Write(z, 0, 1);
                         Thread.Sleep((int)TimeBox.Value);
                         if (i % 1000 == 0 && i != 0 && HalfDuplexOn.Checked)
@@ -220,5 +254,6 @@ namespace MemoryFillerAndReader
                 SP1.Write(z, 0, 1);
             }
         }
+
     }
 }

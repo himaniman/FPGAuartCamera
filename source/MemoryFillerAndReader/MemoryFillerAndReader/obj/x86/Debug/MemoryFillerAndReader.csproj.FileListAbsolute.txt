@@ -6,3 +6,12 @@ C:\GitLocalRep\FPGAuartCamera\source\MemoryFillerAndReader\MemoryFillerAndReader
 C:\GitLocalRep\FPGAuartCamera\source\MemoryFillerAndReader\MemoryFillerAndReader\obj\x86\Debug\MemoryFillerAndReader.exe
 C:\GitLocalRep\FPGAuartCamera\source\MemoryFillerAndReader\MemoryFillerAndReader\obj\x86\Debug\MemoryFillerAndReader.pdb
 c:\GitLocalRep\FPGAuartCamera\source\MemoryFillerAndReader\MemoryFillerAndReader\obj\x86\Debug\MemoryFillerAndReader.csprojResolveAssemblyReference.cache
+E:\MemoryFillerAndReader\MemoryFillerAndReader\obj\x86\Debug\MemoryFillerAndReader.exe
+E:\MemoryFillerAndReader\MemoryFillerAndReader\obj\x86\Debug\MemoryFillerAndReader.pdb
+E:\MemoryFillerAndReader\MemoryFillerAndReader\bin\Debug\MemoryFillerAndReader.exe
+E:\MemoryFillerAndReader\MemoryFillerAndReader\bin\Debug\MemoryFillerAndReader.pdb
+E:\MemoryFillerAndReader\MemoryFillerAndReader\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\MemoryFillerAndReader\MemoryFillerAndReader\obj\x86\Debug\MemoryFillerAndReader.Form1.resources
+E:\MemoryFillerAndReader\MemoryFillerAndReader\obj\x86\Debug\MemoryFillerAndReader.Properties.Resources.resources
+E:\MemoryFillerAndReader\MemoryFillerAndReader\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\MemoryFillerAndReader\MemoryFillerAndReader\obj\x86\Debug\GenerateResource.write.1.tlog
