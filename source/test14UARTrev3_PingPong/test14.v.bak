@@ -1,0 +1,14 @@
+module test14(
+input clk,
+output p1
+);
+
+reg [7:0] counter;
+
+always @(posedge clk) begin
+
+	counter<=counter+1;
+
+end
+
+end 
