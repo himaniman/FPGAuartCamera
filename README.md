@@ -1,5 +1,6 @@
 # FPGAuartCamera
 Trying connect 8bit Camera to FPGA with translate data on UART
+123
 
 Карта подключения камеры и UART модуля
 FPGA - модуль:
