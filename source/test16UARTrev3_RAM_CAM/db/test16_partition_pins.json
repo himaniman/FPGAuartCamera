@@ -8,11 +8,59 @@
 					"strict" : false
 				},
 				{
+					"name" : "XCLK",
+					"strict" : false
+				},
+				{
+					"name" : "debug",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
 				{
+					"name" : "HREF",
+					"strict" : false
+				},
+				{
 					"name" : "PinRX",
+					"strict" : false
+				},
+				{
+					"name" : "VSYNC",
+					"strict" : false
+				},
+				{
+					"name" : "DataBusFromCamera[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DataBusFromCamera[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DataBusFromCamera[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DataBusFromCamera[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DataBusFromCamera[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DataBusFromCamera[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DataBusFromCamera[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DataBusFromCamera[7]",
 					"strict" : false
 				}
 			]

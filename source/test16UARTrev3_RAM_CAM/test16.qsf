@@ -71,4 +71,20 @@ set_location_assignment PIN_P18 -to PinRX
 set_location_assignment PIN_K19 -to PinTX
 set_global_assignment -name CDF_FILE output_files/Chain1.cdf
 set_global_assignment -name QIP_FILE MyVideoBuffer.qip
+set_location_assignment PIN_K16 -to XCLK
+set_location_assignment PIN_G13 -to VSYNC
+set_location_assignment PIN_F14 -to RESET
+set_location_assignment PIN_F15 -to PWDN
+set_location_assignment PIN_J17 -to PCLK
+set_location_assignment PIN_G12 -to HREF
+set_location_assignment PIN_E16 -to DataBusFromCamera[0]
+set_location_assignment PIN_E15 -to DataBusFromCamera[1]
+set_location_assignment PIN_E14 -to DataBusFromCamera[2]
+set_location_assignment PIN_C15 -to DataBusFromCamera[3]
+set_location_assignment PIN_B15 -to DataBusFromCamera[4]
+set_location_assignment PIN_A14 -to DataBusFromCamera[5]
+set_location_assignment PIN_L8 -to DataBusFromCamera[6]
+set_location_assignment PIN_J13 -to DataBusFromCamera[7]
+set_location_assignment PIN_AA2 -to debug
+set_location_assignment PIN_T15 -to debug2
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

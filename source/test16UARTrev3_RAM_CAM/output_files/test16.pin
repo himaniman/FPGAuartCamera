@@ -87,7 +87,7 @@ RESERVED_INPUT               : A10       :        :                   :         
 GND                          : A11       : gnd    :                   :         :           :                
 RESERVED_INPUT               : A12       :        :                   :         : 7A        :                
 RESERVED_INPUT               : A13       :        :                   :         : 7A        :                
-RESERVED_INPUT               : A14       :        :                   :         : 7A        :                
+DataBusFromCamera[5]         : A14       : input  : 2.5 V             :         : 7A        : Y              
 RESERVED_INPUT               : A15       :        :                   :         : 7A        :                
 VCCIO7A                      : A16       : power  :                   : 2.5V    : 7A        :                
 NC                           : A17       :        :                   :         :           :                
@@ -97,7 +97,7 @@ NC                           : A20       :        :                   :         
 GND                          : A21       : gnd    :                   :         :           :                
 NC                           : A22       :        :                   :         :           :                
 RESERVED_INPUT               : AA1       :        :                   :         : 2A        :                
-RESERVED_INPUT               : AA2       :        :                   :         : 2A        :                
+debug                        : AA2       : output : 2.5 V             :         : 2A        : Y              
 GND                          : AA3       : gnd    :                   :         :           :                
 GND                          : AA4       : gnd    :                   :         :           :                
 AS_DATA2, DATA2              : AA5       :        :                   :         : 3A        :                
@@ -154,7 +154,7 @@ RESERVED_INPUT               : B11       :        :                   :         
 RESERVED_INPUT               : B12       :        :                   :         : 7A        :                
 RESERVED_INPUT               : B13       :        :                   :         : 7A        :                
 GND                          : B14       : gnd    :                   :         :           :                
-RESERVED_INPUT               : B15       :        :                   :         : 7A        :                
+DataBusFromCamera[4]         : B15       : input  : 2.5 V             :         : 7A        : Y              
 RESERVED_INPUT               : B16       :        :                   :         : 7A        :                
 NC                           : B17       :        :                   :         :           :                
 NC                           : B18       :        :                   :         :           :                
@@ -176,7 +176,7 @@ RESERVED_INPUT               : C11       :        :                   :         
 VCCIO7A                      : C12       : power  :                   : 2.5V    : 7A        :                
 RESERVED_INPUT               : C13       :        :                   :         : 7A        :                
 VREFB7AN0                    : C14       : power  :                   :         : 7A        :                
-RESERVED_INPUT               : C15       :        :                   :         : 7A        :                
+DataBusFromCamera[3]         : C15       : input  : 2.5 V             :         : 7A        : Y              
 RESERVED_INPUT               : C16       :        :                   :         : 7A        :                
 GND                          : C17       : gnd    :                   :         :           :                
 NC                           : C18       :        :                   :         :           :                
@@ -219,9 +219,9 @@ RESERVED_INPUT               : E10       :        :                   :         
 VCCPD7A8A                    : E11       : power  :                   : 2.5V    : 7A, 8A    :                
 RESERVED_INPUT               : E12       :        :                   :         : 7A        :                
 GND                          : E13       : gnd    :                   :         :           :                
-RESERVED_INPUT               : E14       :        :                   :         : 7A        :                
-RESERVED_INPUT               : E15       :        :                   :         : 7A        :                
-RESERVED_INPUT               : E16       :        :                   :         : 7A        :                
+DataBusFromCamera[2]         : E14       : input  : 2.5 V             :         : 7A        : Y              
+DataBusFromCamera[1]         : E15       : input  : 2.5 V             :         : 7A        : Y              
+DataBusFromCamera[0]         : E16       : input  : 2.5 V             :         : 7A        : Y              
 DNU                          : E17       :        :                   :         :           :                
 VCCIO7A                      : E18       : power  :                   : 2.5V    : 7A        :                
 NC                           : E19       :        :                   :         :           :                
@@ -241,8 +241,8 @@ RESERVED_INPUT               : F10       :        :                   :         
 VCCIO7A                      : F11       : power  :                   : 2.5V    : 7A        :                
 RESERVED_INPUT               : F12       :        :                   :         : 7A        :                
 RESERVED_INPUT               : F13       :        :                   :         : 7A        :                
-RESERVED_INPUT               : F14       :        :                   :         : 7A        :                
-RESERVED_INPUT               : F15       :        :                   :         : 7A        :                
+RESET                        : F14       : output : 2.5 V             :         : 7A        : Y              
+PWDN                         : F15       : output : 2.5 V             :         : 7A        : Y              
 GND                          : F16       : gnd    :                   :         :           :                
 GND                          : F17       :        :                   :         : 7A        :                
 NC                           : F18       :        :                   :         :           :                
@@ -261,8 +261,8 @@ RESERVED_INPUT               : G8        :        :                   :         
 GND                          : G9        : gnd    :                   :         :           :                
 RESERVED_INPUT               : G10       :        :                   :         : 8A        :                
 RESERVED_INPUT               : G11       :        :                   :         : 7A        :                
-RESERVED_INPUT               : G12       :        :                   :         : 7A        :                
-RESERVED_INPUT               : G13       :        :                   :         : 7A        :                
+HREF                         : G12       : input  : 2.5 V             :         : 7A        : Y              
+VSYNC                        : G13       : input  : 2.5 V             :         : 7A        : Y              
 VCCIO7A                      : G14       : power  :                   : 2.5V    : 7A        :                
 RESERVED_INPUT               : G15       :        :                   :         : 7A        :                
 RESERVED_INPUT               : G16       :        :                   :         : 7A        :                
@@ -306,11 +306,11 @@ RESERVED_INPUT               : J9        :        :                   :         
 VCC                          : J10       : power  :                   : 1.1V    :           :                
 RESERVED_INPUT               : J11       :        :                   :         : 7A        :                
 VCC                          : J12       : power  :                   : 1.1V    :           :                
-RESERVED_INPUT               : J13       :        :                   :         : 7A        :                
+DataBusFromCamera[7]         : J13       : input  : 2.5 V             :         : 7A        : Y              
 VCC                          : J14       : power  :                   : 1.1V    :           :                
 GND                          : J15       : gnd    :                   :         :           :                
 VCC                          : J16       : power  :                   : 1.1V    :           :                
-RESERVED_INPUT               : J17       :        :                   :         : 7A        :                
+PCLK                         : J17       : input  : 2.5 V             :         : 7A        : Y              
 RESERVED_INPUT               : J18       :        :                   :         : 7A        :                
 RESERVED_INPUT               : J19       :        :                   :         : 7A        :                
 GND                          : J20       : gnd    :                   :         :           :                
@@ -331,7 +331,7 @@ GND                          : K12       : gnd    :                   :         
 VCC                          : K13       : power  :                   : 1.1V    :           :                
 GND                          : K14       : gnd    :                   :         :           :                
 VCC                          : K15       : power  :                   : 1.1V    :           :                
-RESERVED_INPUT               : K16       :        :                   :         : 7A        :                
+XCLK                         : K16       : output : 2.5 V             :         : 7A        : Y              
 RESERVED_INPUT               : K17       :        :                   :         : 5B        :                
 VCCIO5B                      : K18       : power  :                   : 2.5V    : 5B        :                
 PinTX                        : K19       : output : 2.5 V             :         : 7A        : Y              
@@ -345,7 +345,7 @@ VCC                          : L4        : power  :                   : 1.1V    
 GND                          : L5        : gnd    :                   :         :           :                
 MSEL0                        : L6        :        :                   :         : 9A        :                
 RESERVED_INPUT               : L7        :        :                   :         : 8A        :                
-RESERVED_INPUT               : L8        :        :                   :         : 7A        :                
+DataBusFromCamera[6]         : L8        : input  : 2.5 V             :         : 7A        : Y              
 DNU                          : L9        :        :                   :         :           :                
 VCC                          : L10       : power  :                   : 1.1V    :           :                
 GND                          : L11       : gnd    :                   :         :           :                

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for test16
-Mon Sep 05 18:34:47 2016
+Mon Sep 12 13:06:24 2016
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
 
 
@@ -15,13 +15,13 @@ Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
- 10. State Machine - |test16|State
- 11. Registers Removed During Synthesis
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
  12. General Register Statistics
  13. Inverted Register Statistics
  14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for MyVideoBuffer:comb_506|altsyncram:altsyncram_component|altsyncram_umk1:auto_generated
- 16. Parameter Settings for User Entity Instance: MyVideoBuffer:comb_506|altsyncram:altsyncram_component
+ 15. Source assignments for MyVideoBuffer:comb_987|altsyncram:altsyncram_component|altsyncram_umk1:auto_generated
+ 16. Parameter Settings for User Entity Instance: MyVideoBuffer:comb_987|altsyncram:altsyncram_component
  17. altsyncram Parameter Settings by Entity Instance
  18. Post-Synthesis Netlist Statistics for Top Partition
  19. Elapsed Time Per Partition
@@ -52,14 +52,14 @@ agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Sep 05 18:34:47 2016           ;
+; Analysis & Synthesis Status     ; Successful - Mon Sep 12 13:06:24 2016           ;
 ; Quartus Prime Version           ; 15.1.0 Build 185 10/21/2015 SJ Standard Edition ;
 ; Revision Name                   ; test16                                          ;
 ; Top-level Entity Name           ; test16                                          ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 97                                              ;
-; Total pins                      ; 3                                               ;
+; Total registers                 ; 104                                             ;
+; Total pins                      ; 18                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 262,144                                         ;
 ; Total DSP Blocks                ; 0                                               ;
@@ -206,27 +206,27 @@ agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 84        ;
+; Estimate of Logic utilization (ALMs needed) ; 132       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 137       ;
-;     -- 7 input functions                    ; 2         ;
-;     -- 6 input functions                    ; 25        ;
-;     -- 5 input functions                    ; 17        ;
-;     -- 4 input functions                    ; 19        ;
-;     -- <=3 input functions                  ; 74        ;
+; Combinational ALUT usage for logic          ; 206       ;
+;     -- 7 input functions                    ; 3         ;
+;     -- 6 input functions                    ; 45        ;
+;     -- 5 input functions                    ; 33        ;
+;     -- 4 input functions                    ; 28        ;
+;     -- <=3 input functions                  ; 97        ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 97        ;
+; Dedicated logic registers                   ; 104       ;
 ;                                             ;           ;
-; I/O pins                                    ; 3         ;
+; I/O pins                                    ; 18        ;
 ; Total MLAB memory bits                      ; 0         ;
 ; Total block memory bits                     ; 262144    ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 129       ;
-; Total fan-out                               ; 1418      ;
-; Average fan-out                             ; 5.21      ;
+; Maximum fan-out                             ; 136       ;
+; Total fan-out                               ; 1739      ;
+; Average fan-out                             ; 4.60      ;
 +---------------------------------------------+-----------+
 
 
@@ -235,13 +235,13 @@ agreement for further details.
 +-------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                  ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------+--------------+
-; |test16                                   ; 137 (82)          ; 97 (59)      ; 262144            ; 0          ; 3    ; 0            ; |test16                                                                                                              ; work         ;
-;    |MyVideoBuffer:comb_506|               ; 8 (0)             ; 4 (0)        ; 262144            ; 0          ; 0    ; 0            ; |test16|MyVideoBuffer:comb_506                                                                                       ; work         ;
-;       |altsyncram:altsyncram_component|   ; 8 (0)             ; 4 (0)        ; 262144            ; 0          ; 0    ; 0            ; |test16|MyVideoBuffer:comb_506|altsyncram:altsyncram_component                                                       ; work         ;
-;          |altsyncram_umk1:auto_generated| ; 8 (0)             ; 4 (4)        ; 262144            ; 0          ; 0    ; 0            ; |test16|MyVideoBuffer:comb_506|altsyncram:altsyncram_component|altsyncram_umk1:auto_generated                        ; work         ;
-;             |decode_11a:rden_decode|      ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |test16|MyVideoBuffer:comb_506|altsyncram:altsyncram_component|altsyncram_umk1:auto_generated|decode_11a:rden_decode ; work         ;
-;             |decode_8la:decode3|          ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |test16|MyVideoBuffer:comb_506|altsyncram:altsyncram_component|altsyncram_umk1:auto_generated|decode_8la:decode3     ; work         ;
-;    |myUARTrev3:comb_505|                  ; 47 (47)           ; 34 (34)      ; 0                 ; 0          ; 0    ; 0            ; |test16|myUARTrev3:comb_505                                                                                          ; work         ;
+; |test16                                   ; 206 (149)         ; 104 (66)     ; 262144            ; 0          ; 18   ; 0            ; |test16                                                                                                              ; work         ;
+;    |MyVideoBuffer:comb_987|               ; 8 (0)             ; 4 (0)        ; 262144            ; 0          ; 0    ; 0            ; |test16|MyVideoBuffer:comb_987                                                                                       ; work         ;
+;       |altsyncram:altsyncram_component|   ; 8 (0)             ; 4 (0)        ; 262144            ; 0          ; 0    ; 0            ; |test16|MyVideoBuffer:comb_987|altsyncram:altsyncram_component                                                       ; work         ;
+;          |altsyncram_umk1:auto_generated| ; 8 (0)             ; 4 (4)        ; 262144            ; 0          ; 0    ; 0            ; |test16|MyVideoBuffer:comb_987|altsyncram:altsyncram_component|altsyncram_umk1:auto_generated                        ; work         ;
+;             |decode_11a:rden_decode|      ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |test16|MyVideoBuffer:comb_987|altsyncram:altsyncram_component|altsyncram_umk1:auto_generated|decode_11a:rden_decode ; work         ;
+;             |decode_8la:decode3|          ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |test16|MyVideoBuffer:comb_987|altsyncram:altsyncram_component|altsyncram_umk1:auto_generated|decode_8la:decode3     ; work         ;
+;    |myUARTrev3:comb_986|                  ; 49 (49)           ; 34 (34)      ; 0                 ; 0          ; 0    ; 0            ; |test16|myUARTrev3:comb_986                                                                                          ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -251,7 +251,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------+------+
 ; Name                                                                                             ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF  ;
 +--------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------+------+
-; MyVideoBuffer:comb_506|altsyncram:altsyncram_component|altsyncram_umk1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 32768        ; 8            ; --           ; --           ; 262144 ; None ;
+; MyVideoBuffer:comb_987|altsyncram:altsyncram_component|altsyncram_umk1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 32768        ; 8            ; --           ; --           ; 262144 ; None ;
 +--------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------+------+
 
 
@@ -260,31 +260,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+--------------------------------+-----------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                ; IP Include File ;
 +--------+--------------+---------+--------------+--------------+--------------------------------+-----------------+
-; Altera ; RAM: 1-PORT  ; 15.1    ; N/A          ; N/A          ; |test16|MyVideoBuffer:comb_506 ; MyVideoBuffer.v ;
+; Altera ; RAM: 1-PORT  ; 15.1    ; N/A          ; N/A          ; |test16|MyVideoBuffer:comb_987 ; MyVideoBuffer.v ;
 +--------+--------------+---------+--------------+--------------+--------------------------------+-----------------+
 
 
-Encoding Type:  One-Hot
-+---------------------------------------------------+
-; State Machine - |test16|State                     ;
-+------------+------------+------------+------------+
-; Name       ; State.0000 ; State.0010 ; State.0001 ;
-+------------+------------+------------+------------+
-; State.0000 ; 0          ; 0          ; 0          ;
-; State.0001 ; 1          ; 0          ; 1          ;
-; State.0010 ; 1          ; 1          ; 0          ;
-+------------+------------+------------+------------+
++-------------------------------------------------------------+
+; Registers Removed During Synthesis                          ;
++----------------------------------------+--------------------+
+; Register name                          ; Reason for Removal ;
++----------------------------------------+--------------------+
+; CounterByteFromCameraRows[2..9]        ; Lost fanout        ;
+; CounterByteFromCameraPixcel[2..9]      ; Lost fanout        ;
+; Total Number of Removed Registers = 16 ;                    ;
++----------------------------------------+--------------------+
 
 
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; State~6                               ; Lost fanout        ;
-; State~7                               ; Lost fanout        ;
-; Total Number of Removed Registers = 2 ;                    ;
-+---------------------------------------+--------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                           ;
++--------------------------------+--------------------+-----------------------------------------------------------------+
+; Register name                  ; Reason for Removal ; Registers Removed due to This Register                          ;
++--------------------------------+--------------------+-----------------------------------------------------------------+
+; CounterByteFromCameraRows[9]   ; Lost Fanouts       ; CounterByteFromCameraRows[8], CounterByteFromCameraRows[7],     ;
+;                                ;                    ; CounterByteFromCameraRows[6], CounterByteFromCameraRows[5],     ;
+;                                ;                    ; CounterByteFromCameraRows[4], CounterByteFromCameraRows[3],     ;
+;                                ;                    ; CounterByteFromCameraRows[2]                                    ;
+; CounterByteFromCameraPixcel[9] ; Lost Fanouts       ; CounterByteFromCameraPixcel[8], CounterByteFromCameraPixcel[7], ;
+;                                ;                    ; CounterByteFromCameraPixcel[6], CounterByteFromCameraPixcel[5], ;
+;                                ;                    ; CounterByteFromCameraPixcel[4], CounterByteFromCameraPixcel[3], ;
+;                                ;                    ; CounterByteFromCameraPixcel[2]                                  ;
++--------------------------------+--------------------+-----------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -292,12 +296,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 97    ;
-; Number of registers using Synchronous Clear  ; 32    ;
-; Number of registers using Synchronous Load   ; 31    ;
+; Total registers                              ; 104   ;
+; Number of registers using Synchronous Clear  ; 36    ;
+; Number of registers using Synchronous Load   ; 23    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 87    ;
+; Number of registers using Clock Enable       ; 81    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -307,7 +311,7 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; myUARTrev3:comb_505|PinTX              ; 2       ;
+; myUARTrev3:comb_986|PinTX              ; 2       ;
 ; Total number of inverted registers = 1 ;         ;
 +----------------------------------------+---------+
 
@@ -317,19 +321,22 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |test16|myUARTrev3:comb_505|shiftRegTX[4]            ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |test16|myUARTrev3:comb_505|clok2048MbodCounterTX[7] ;
-; 5:1                ; 15 bits   ; 45 LEs        ; 30 LEs               ; 15 LEs                 ; Yes        ; |test16|CounterNededByte[4]                          ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |test16|myUARTrev3:comb_505|clok2048MbodCounterRX[7] ;
-; 5:1                ; 15 bits   ; 45 LEs        ; 0 LEs                ; 45 LEs                 ; Yes        ; |test16|AddressPoint[13]                             ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |test16|CounterPauseForTransmitUART[3]               ;
-; 7:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |test16|DataBusToUART[0]                             ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |test16|State                                        ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |test16|myUARTrev3:comb_986|shiftRegTX[0]            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |test16|myUARTrev3:comb_986|clok2048MbodCounterTX[7] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |test16|CounterByteFromCameraRows[1]                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |test16|DataBusToRAM[0]                              ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |test16|CounterByteFromCameraPixcel[3]               ;
+; 5:1                ; 15 bits   ; 45 LEs        ; 30 LEs               ; 15 LEs                 ; Yes        ; |test16|CounterNededByte[9]                          ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |test16|myUARTrev3:comb_986|clok2048MbodCounterRX[6] ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 24 LEs               ; 16 LEs                 ; Yes        ; |test16|CounterPauseForTransmitUART[6]               ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; Yes        ; |test16|DataBusToUART[0]                             ;
+; 9:1                ; 15 bits   ; 90 LEs        ; 0 LEs                ; 90 LEs                 ; Yes        ; |test16|AddressPoint[1]                              ;
+; 18:1               ; 4 bits    ; 48 LEs        ; 40 LEs               ; 8 LEs                  ; Yes        ; |test16|State[2]                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------+
-; Source assignments for MyVideoBuffer:comb_506|altsyncram:altsyncram_component|altsyncram_umk1:auto_generated ;
+; Source assignments for MyVideoBuffer:comb_987|altsyncram:altsyncram_component|altsyncram_umk1:auto_generated ;
 +---------------------------------+--------------------+------+------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                             ;
 +---------------------------------+--------------------+------+------------------------------------------------+
@@ -338,7 +345,7 @@ Encoding Type:  One-Hot
 
 
 +-----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: MyVideoBuffer:comb_506|altsyncram:altsyncram_component ;
+; Parameter Settings for User Entity Instance: MyVideoBuffer:comb_987|altsyncram:altsyncram_component ;
 +------------------------------------+----------------------+-----------------------------------------+
 ; Parameter Name                     ; Value                ; Type                                    ;
 +------------------------------------+----------------------+-----------------------------------------+
@@ -404,7 +411,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Name                                      ; Value                                                  ;
 +-------------------------------------------+--------------------------------------------------------+
 ; Number of entity instances                ; 1                                                      ;
-; Entity Instance                           ; MyVideoBuffer:comb_506|altsyncram:altsyncram_component ;
+; Entity Instance                           ; MyVideoBuffer:comb_987|altsyncram:altsyncram_component ;
 ;     -- OPERATION_MODE                     ; SINGLE_PORT                                            ;
 ;     -- WIDTH_A                            ; 8                                                      ;
 ;     -- NUMWORDS_A                         ; 32768                                                  ;
@@ -423,30 +430,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 97                          ;
-;     ENA               ; 25                          ;
-;     ENA SCLR          ; 31                          ;
-;     ENA SLD           ; 31                          ;
+; arriav_ff             ; 104                         ;
+;     ENA               ; 23                          ;
+;     ENA SCLR          ; 35                          ;
+;     ENA SLD           ; 23                          ;
 ;     SCLR              ; 1                           ;
-;     plain             ; 9                           ;
-; arriav_lcell_comb     ; 138                         ;
-;     arith             ; 54                          ;
-;         1 data inputs ; 54                          ;
-;     extend            ; 2                           ;
-;         7 data inputs ; 2                           ;
-;     normal            ; 82                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 10                          ;
-;         3 data inputs ; 9                           ;
-;         4 data inputs ; 19                          ;
-;         5 data inputs ; 17                          ;
-;         6 data inputs ; 25                          ;
-; boundary_port         ; 3                           ;
+;     plain             ; 22                          ;
+; arriav_lcell_comb     ; 208                         ;
+;     arith             ; 58                          ;
+;         1 data inputs ; 58                          ;
+;     extend            ; 3                           ;
+;         7 data inputs ; 3                           ;
+;     normal            ; 147                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 14                          ;
+;         3 data inputs ; 23                          ;
+;         4 data inputs ; 28                          ;
+;         5 data inputs ; 33                          ;
+;         6 data inputs ; 45                          ;
+; boundary_port         ; 18                          ;
 ; stratixv_ram_block    ; 32                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.89                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 2.53                        ;
 +-----------------------+-----------------------------+
 
 
@@ -455,7 +462,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -465,7 +472,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
-    Info: Processing started: Mon Sep 05 18:34:37 2016
+    Info: Processing started: Mon Sep 12 13:06:14 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off test16 -c test16
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file myuartrev3.v
@@ -474,23 +481,30 @@ Info (12021): Found 1 design units, including 1 entities, in source file test16.
     Info (12023): Found entity 1: test16 File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file myvideobuffer.v
     Info (12023): Found entity 1: MyVideoBuffer File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/MyVideoBuffer.v Line: 40
-Warning (10236): Verilog HDL Implicit Net warning at test16.v(92): created implicit net for "ActionDataReciveFromUART" File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 92
-Critical Warning (10846): Verilog HDL Instantiation warning at test16.v(93): instance has no name File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 93
-Critical Warning (10846): Verilog HDL Instantiation warning at test16.v(101): instance has no name File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 101
+Warning (10236): Verilog HDL Implicit Net warning at test16.v(183): created implicit net for "ActionDataReciveFromUART" File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 183
+Critical Warning (10846): Verilog HDL Instantiation warning at test16.v(184): instance has no name File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 184
+Critical Warning (10846): Verilog HDL Instantiation warning at test16.v(192): instance has no name File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 192
 Info (12127): Elaborating entity "test16" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at test16.v(27): truncated value with size 32 to match size of target (15) File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 27
-Warning (10230): Verilog HDL assignment warning at test16.v(63): truncated value with size 32 to match size of target (8) File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 63
-Warning (10230): Verilog HDL assignment warning at test16.v(67): truncated value with size 32 to match size of target (15) File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 67
-Warning (10230): Verilog HDL assignment warning at test16.v(68): truncated value with size 32 to match size of target (15) File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 68
-Info (12128): Elaborating entity "myUARTrev3" for hierarchy "myUARTrev3:comb_505" File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 93
+Warning (10036): Verilog HDL or VHDL warning at test16.v(36): object "FirstByteFromCamera" assigned a value but never read File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 36
+Warning (10230): Verilog HDL assignment warning at test16.v(60): truncated value with size 32 to match size of target (15) File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 60
+Warning (10230): Verilog HDL assignment warning at test16.v(67): truncated value with size 32 to match size of target (10) File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 67
+Warning (10230): Verilog HDL assignment warning at test16.v(78): truncated value with size 32 to match size of target (10) File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 78
+Warning (10230): Verilog HDL assignment warning at test16.v(82): truncated value with size 32 to match size of target (10) File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 82
+Warning (10230): Verilog HDL assignment warning at test16.v(102): truncated value with size 32 to match size of target (15) File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 102
+Warning (10230): Verilog HDL assignment warning at test16.v(143): truncated value with size 32 to match size of target (8) File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 143
+Warning (10230): Verilog HDL assignment warning at test16.v(147): truncated value with size 32 to match size of target (15) File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 147
+Warning (10230): Verilog HDL assignment warning at test16.v(148): truncated value with size 32 to match size of target (15) File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 148
+Warning (10230): Verilog HDL assignment warning at test16.v(159): truncated value with size 32 to match size of target (8) File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 159
+Warning (10230): Verilog HDL assignment warning at test16.v(163): truncated value with size 10 to match size of target (8) File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 163
+Info (12128): Elaborating entity "myUARTrev3" for hierarchy "myUARTrev3:comb_986" File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 184
 Warning (10230): Verilog HDL assignment warning at myUARTrev3.v(20): truncated value with size 32 to match size of target (8) File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/myUARTrev3.v Line: 20
 Warning (10230): Verilog HDL assignment warning at myUARTrev3.v(23): truncated value with size 32 to match size of target (8) File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/myUARTrev3.v Line: 23
 Warning (10230): Verilog HDL assignment warning at myUARTrev3.v(53): truncated value with size 32 to match size of target (8) File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/myUARTrev3.v Line: 53
 Warning (10230): Verilog HDL assignment warning at myUARTrev3.v(57): truncated value with size 32 to match size of target (8) File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/myUARTrev3.v Line: 57
-Info (12128): Elaborating entity "MyVideoBuffer" for hierarchy "MyVideoBuffer:comb_506" File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 101
-Info (12128): Elaborating entity "altsyncram" for hierarchy "MyVideoBuffer:comb_506|altsyncram:altsyncram_component" File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/MyVideoBuffer.v Line: 86
-Info (12130): Elaborated megafunction instantiation "MyVideoBuffer:comb_506|altsyncram:altsyncram_component" File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/MyVideoBuffer.v Line: 86
-Info (12133): Instantiated megafunction "MyVideoBuffer:comb_506|altsyncram:altsyncram_component" with the following parameter: File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/MyVideoBuffer.v Line: 86
+Info (12128): Elaborating entity "MyVideoBuffer" for hierarchy "MyVideoBuffer:comb_987" File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 192
+Info (12128): Elaborating entity "altsyncram" for hierarchy "MyVideoBuffer:comb_987|altsyncram:altsyncram_component" File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/MyVideoBuffer.v Line: 86
+Info (12130): Elaborated megafunction instantiation "MyVideoBuffer:comb_987|altsyncram:altsyncram_component" File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/MyVideoBuffer.v Line: 86
+Info (12133): Instantiated megafunction "MyVideoBuffer:comb_987|altsyncram:altsyncram_component" with the following parameter: File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/MyVideoBuffer.v Line: 86
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "intended_device_family" = "Cyclone V"
@@ -507,29 +521,34 @@ Info (12133): Instantiated megafunction "MyVideoBuffer:comb_506|altsyncram:altsy
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_umk1.tdf
     Info (12023): Found entity 1: altsyncram_umk1 File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/db/altsyncram_umk1.tdf Line: 34
-Info (12128): Elaborating entity "altsyncram_umk1" for hierarchy "MyVideoBuffer:comb_506|altsyncram:altsyncram_component|altsyncram_umk1:auto_generated" File: c:/altera/15.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "altsyncram_umk1" for hierarchy "MyVideoBuffer:comb_987|altsyncram:altsyncram_component|altsyncram_umk1:auto_generated" File: c:/altera/15.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_8la.tdf
     Info (12023): Found entity 1: decode_8la File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/db/decode_8la.tdf Line: 23
-Info (12128): Elaborating entity "decode_8la" for hierarchy "MyVideoBuffer:comb_506|altsyncram:altsyncram_component|altsyncram_umk1:auto_generated|decode_8la:decode3" File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/db/altsyncram_umk1.tdf Line: 45
+Info (12128): Elaborating entity "decode_8la" for hierarchy "MyVideoBuffer:comb_987|altsyncram:altsyncram_component|altsyncram_umk1:auto_generated|decode_8la:decode3" File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/db/altsyncram_umk1.tdf Line: 45
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_11a.tdf
     Info (12023): Found entity 1: decode_11a File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/db/decode_11a.tdf Line: 23
-Info (12128): Elaborating entity "decode_11a" for hierarchy "MyVideoBuffer:comb_506|altsyncram:altsyncram_component|altsyncram_umk1:auto_generated|decode_11a:rden_decode" File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/db/altsyncram_umk1.tdf Line: 46
+Info (12128): Elaborating entity "decode_11a" for hierarchy "MyVideoBuffer:comb_987|altsyncram:altsyncram_component|altsyncram_umk1:auto_generated|decode_11a:rden_decode" File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/db/altsyncram_umk1.tdf Line: 46
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_ofb.tdf
     Info (12023): Found entity 1: mux_ofb File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/db/mux_ofb.tdf Line: 23
-Info (12128): Elaborating entity "mux_ofb" for hierarchy "MyVideoBuffer:comb_506|altsyncram:altsyncram_component|altsyncram_umk1:auto_generated|mux_ofb:mux2" File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/db/altsyncram_umk1.tdf Line: 47
+Info (12128): Elaborating entity "mux_ofb" for hierarchy "MyVideoBuffer:comb_987|altsyncram:altsyncram_component|altsyncram_umk1:auto_generated|mux_ofb:mux2" File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/db/altsyncram_umk1.tdf Line: 47
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "PWDN" is stuck at GND File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 11
+    Warning (13410): Pin "RESET" is stuck at VCC File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 12
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (17049): 16 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 193 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 158 logic cells
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "PCLK" File: C:/GitLocalRepositories/FPGAuartCamera/source/test16UARTrev3_RAM_CAM/test16.v Line: 7
+Info (21057): Implemented 276 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 5 output pins
+    Info (21061): Implemented 226 logic cells
     Info (21064): Implemented 32 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 871 megabytes
-    Info: Processing ended: Mon Sep 05 18:34:47 2016
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 873 megabytes
+    Info: Processing ended: Mon Sep 12 13:06:24 2016
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Total CPU time (on all processors): 00:00:21
 
 
